@@ -9,7 +9,7 @@ const Jobs = require("./routes/jobs");
 const cors = require("cors");
 const errorMiddleware = require("./middlewares/error");
 const cookieParser = require("cookie-parser");
-const Errorhandler = require("./utils/ErrorHandler");
+const Errorhandler = require("./utils/errorHandler");
 const ConnectDatabase = require("./config/database");
 dotenv.config({ path: path.join(__dirname, "config/config.env") });
 

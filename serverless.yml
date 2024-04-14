@@ -21,7 +21,7 @@ functions:
           cors: true
     environment:
       NODE_ENV: development
-      DB_LOCAL_URI: mongodb+srv://keerthivasan:Nainrake1%40@cluster0.j71dyia.mongodb.net/expense
+      DB_LOCAL_URI: mongodb+srv://prodo:Lgr6wfAXHKiUqLxj@cluster0.j71dyia.mongodb.net/jobs
       JWT_SECRET: BFD96F49A17A7F57D48DA6A1E524F
       EMAIL_SECRET:  9324F262FCCDF
       NAME_SECRET: BCEC6
