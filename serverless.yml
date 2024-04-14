@@ -1,0 +1,31 @@
+service: apiserverlessexpensefinal
+frameworkVersion: "3"
+
+provider:
+  name: aws
+  runtime: nodejs14.x
+  stage: dev
+  region: us-east-1
+
+functions:
+  app:
+    handler: app.server
+    events:
+      - http: 
+          path: /
+          method: ANY  
+          cors: true
+      - http: 
+          path: /{proxy+}
+          method: ANY
+          cors: true
+    environment:
+      NODE_ENV: development
+      DB_LOCAL_URI: mongodb+srv://keerthivasan:Nainrake1%40@cluster0.j71dyia.mongodb.net/expense
+      JWT_SECRET: BFD96F49A17A7F57D48DA6A1E524F
+      EMAIL_SECRET:  9324F262FCCDF
+      NAME_SECRET: BCEC6
+      HASH_IV:  2aefc7cc2117515039696a22cfb6c175
+      JWT_EXPIRES_TIME: 7d
+      COOKIE_EXPIRES: 7
+
